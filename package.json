@@ -1,0 +1,6 @@
+{
+  "name": "round-monorepo-prototype",
+  "version": "1.0.0",
+  "description": "Prototype for managing shared code in round projects",
+  "private": true
+}
