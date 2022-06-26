@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Prototype for managing shared code in round projects",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
   "devDependencies": {
     "lerna": "5.1.6",
     "nx": "14.3.6"
