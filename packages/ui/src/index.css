@@ -1,0 +1,12 @@
+@import './styles/normalize.css';
+@import './styles/colors.css';
+@import './styles/typography.css';
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
