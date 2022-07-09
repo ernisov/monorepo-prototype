@@ -5,3 +5,6 @@ developing, building, testing and deploying using Lerna.
 
 ## Prerequisites
 - npm version 7+ (automatically installs peer dependencies. It is required in ui package.)
+
+## Start
+To start the project run `docker-compose up -d --build`
