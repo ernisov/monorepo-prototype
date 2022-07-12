@@ -17,4 +17,4 @@ jobs:
         if: steps.prototype-cache.outputs.cache-hit != 'true'
         run: |
           docker build -t monorepo-image .
-          docker run -it --name monorepo monorepo-image npx lerna run test --no-sort
+          docker run --name monorepo monorepo-image npx lerna run test --no-sort
