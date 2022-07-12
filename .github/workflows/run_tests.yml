@@ -11,7 +11,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /
-          key: prototype-${{ hashFiles('/') }}
+          key: prototype-${{ hashFiles('*') }}
 
       - name: Build & Test
         if: steps.prototype-cache.outputs.cache-hit != 'true'
