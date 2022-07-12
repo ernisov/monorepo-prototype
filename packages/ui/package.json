@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "UI kit for round projects",
   "module": "dist/esm/index.js",
+  "main": "dist/cjs/index.js",
   "license": "MIT",
   "private": true,
   "files": [
