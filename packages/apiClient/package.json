@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "build": "rollup -c",
-    "rollup:watch": "rollup -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rollup:watch": "rollup -c -w"
   },
   "author": "",
   "module": "dist/esm/index.js",
