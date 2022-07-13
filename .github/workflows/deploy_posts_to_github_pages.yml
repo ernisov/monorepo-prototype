@@ -1,0 +1,15 @@
+name: Deploy Posts to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Deploy
+        run: |
+          docker build --target posts -t monorepo-image .
+          docker run --env CI=true --name monorepo monorepo-image npm run build && npm run deploy
