@@ -12,4 +12,6 @@ jobs:
       - name: Build & Deploy
         run: |
           docker build --target posts -t monorepo-image .
-          docker run --env CI=true --name monorepo monorepo-image npm run build && npm run deploy
+          docker run --env CI=true --name monorepo monorepo-image bash
+          npm run build
+          npm run deploy
