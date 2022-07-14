@@ -32,6 +32,16 @@ WORKDIR /app/
 RUN npx lerna bootstrap --scope=posts --includeDependencies
 WORKDIR /app/packages/posts
 
+# Admin app
+FROM base as admin
+COPY --from=ui /app/packages/ui /app/packages/ui/
+COPY --from=api /app/packages/apiClient /app/packages/apiClient/
+WORKDIR /app/packages/admin
+COPY packages/admin ./
+WORKDIR /app/
+RUN npx lerna bootstrap --scope=admin --includeDependencies
+WORKDIR /app/packages/admin
+
 # Final
 FROM base
 COPY --from=ui /app/packages/ui /app/packages/ui
