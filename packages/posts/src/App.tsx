@@ -1,5 +1,4 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import './App.css';
 import { Button } from 'ui';
 import {getPosts, Post} from "apiclient";
 
@@ -19,9 +18,8 @@ function App() {
         fetchPosts();
     }, []);
 
-
     return (
-        <div className="App">
+        <div>
             <Button>Testing UI Library</Button>
             {posts.map(post => (
                 <div key={post.id}>
