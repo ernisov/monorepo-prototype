@@ -47,4 +47,5 @@ FROM base
 COPY --from=ui /app/packages/ui /app/packages/ui
 COPY --from=api /app/packages/apiClient /app/packages/apiClient
 COPY --from=posts /app/packages/posts /app/packages/posts
+COPY --from=admin /app/packages/admin /app/packages/admin
 RUN npx lerna bootstrap
