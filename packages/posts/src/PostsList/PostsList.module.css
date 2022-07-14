@@ -1,0 +1,22 @@
+.list {
+    padding: 0 1rem;
+}
+
+.list > * + * {
+    margin-top: 0.75rem;
+}
+
+.post > * {
+    margin: 0;
+}
+
+.postTitle {
+    color: var(--color-grey);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.postBody {
+    font-size: 0.875rem;
+    color: var(--color-text);
+}

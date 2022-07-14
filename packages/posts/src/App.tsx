@@ -1,31 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
-import { Button } from 'ui';
-import {getPosts, Post} from "apiclient";
+import React from 'react';
+import PostsList from "./PostsList/PostsList";
 
 function App() {
-    const [posts, setPosts] = useState<Post[]>([]);
-
-    const fetchPosts = useCallback(async () => {
-        try {
-            const posts = await getPosts();
-            setPosts(posts);
-        } catch {
-
-        }
-    }, []);
-
-    useEffect(() => {
-        fetchPosts();
-    }, []);
-
     return (
         <div>
-            <Button>Testing UI Library</Button>
-            {posts.map(post => (
-                <div key={post.id}>
-                    {post.title}
-                </div>
-            ))}
+            <PostsList />
         </div>
     );
 }
