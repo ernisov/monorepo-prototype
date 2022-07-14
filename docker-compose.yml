@@ -26,3 +26,15 @@ services:
     volumes:
       - "./packages/posts:/app/packages/posts"
       - "/app/packages/posts/node_modules"
+
+  admin:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: admin
+    command: npm run start
+    ports:
+      - 3001:3000
+    volumes:
+      - "./packages/admin:/app/packages/admin"
+      - "/app/packages/admin/node_modules"
