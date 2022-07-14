@@ -1,6 +1,9 @@
 .button {
     border: none;
-    background-color: var(--color-background-2);
-    color: var(--color-grey);
+    border-radius: 0.25rem;
+    font-weight: 400;
+    background-color: var(--color-grey);
+    color: white;
     cursor: pointer;
+    padding: 0.3125rem 0.9375rem;
 }
