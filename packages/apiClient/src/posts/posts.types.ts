@@ -4,3 +4,5 @@ export type Post = {
     title: string;
     body: string;
 };
+
+export type PostApiBody = Omit<Post, 'id'>;

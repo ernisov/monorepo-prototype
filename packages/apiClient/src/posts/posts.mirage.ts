@@ -1,6 +1,6 @@
-import { Model } from "miragejs";
-import { ModelDefinition } from "miragejs/-types";
-import { Post } from "./posts.types";
+import {Model} from "miragejs";
+import {ModelDefinition} from "miragejs/-types";
+import {Post} from "./posts.types";
 import createFactory from "../mirage/helpers/createFactory";
 import {AppServer} from "../mirage";
 
@@ -25,5 +25,10 @@ export const factories = {
 export function handlePostApi(server: AppServer) {
     server.get('/posts', (schema) => {
         return schema.all('post');
+    });
+
+    server.post('/posts', (schema, request) => {
+        const data = JSON.parse(request.requestBody);
+        return schema.create('post', data);
     });
 }
