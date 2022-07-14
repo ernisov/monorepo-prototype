@@ -11,11 +11,18 @@ const packageJson = require('./package.json');
 export default [
     {
         input: 'src/index.ts',
-        output: {
-            file: packageJson.module,
-            format: 'esm',
-            sourcemap: true,
-        },
+        output: [
+            {
+                file: packageJson.module,
+                format: 'esm',
+                sourcemap: true,
+            },
+            {
+                file: packageJson.main,
+                format: 'cjs',
+                sourcemap: true,
+            },
+        ],
         plugins: [
             del({ targets: 'dist/*' }),
             resolve(),
